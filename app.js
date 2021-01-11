@@ -1,5 +1,10 @@
-// import functions and grab DOM elements
+import { answerContainsY } from './utils.js';
 
-// initialize state
+const startQuizButton = document.getElementById('quiz-start-button');
+const resultsDisplayElement = document.getElementById('results-display');
 
+
+startQuizButton.addEventListener('click', () => {
+    
+});
 // set event listeners to update state and DOM
