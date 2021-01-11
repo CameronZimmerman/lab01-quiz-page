@@ -22,6 +22,7 @@ Quiz:
     -verify: put log in listener
 
 - On click 
+    - Hide information! so they can't cheat buahahaha
     - alert user (hello or something)
     - create confirm, and check and see if it returns true(they clicked yes)
         - if yes continue with function
