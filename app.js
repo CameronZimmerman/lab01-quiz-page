@@ -23,7 +23,7 @@ startQuizButton.addEventListener('click', () => {
     const answerKey = ['N', 'Y', 'N', 'N', 'Y'];
 
     let correctAnswers = 0;
-    const possibleCorrectAnswers = 3;
+    const possibleCorrectAnswers = 5;
 
     //for each question in our array, ask the user a question and if the answer matches the key add to correct answers
        
@@ -48,7 +48,7 @@ startQuizButton.addEventListener('click', () => {
         resultsDisplayElement.textContent = `Wow ${fName}... I'd go so far as to say you're a Cameron expert`;
         resultsDisplayElement.style.color = 'green';
     }
-   
+    console.log(correctAnswers);
     resultsDisplayElement.textContent += ` (${correctAnswers}/${possibleCorrectAnswers}) correct or ${calculatePercentage(correctAnswers, possibleCorrectAnswers)} percent!`;
     
 });
