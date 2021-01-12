@@ -10,6 +10,7 @@ let lName;
 
 
 export function quizIntroduction(){
+    resultsDisplayElement.textContent = '';
     //quiz introduction
     alert('Hello and welcome to the quiz about me, Cameron.');
     //confirm user would like to take quiz, if not break function
@@ -57,4 +58,5 @@ export function showQuizResults(){
         resultsDisplayElement.style.color = 'green';
     }
     resultsDisplayElement.textContent += ` (${correctAnswers}/${possibleCorrectAnswers}) correct or ${calculatePercentage(correctAnswers, possibleCorrectAnswers)} percent!`;
+    correctAnswers = 0;
 }
