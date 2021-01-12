@@ -60,7 +60,7 @@ section {
 header {
     display: flex;
     justify-content: center;
-    background-color: rgba(136, 0, 255, 0.25);
+    background-color: rgb(245, 180, 0);
     height: var(--header-height);
     box-shadow: var(--shadow);
     font-family: 'Hachi Maru Pop', cursive;
