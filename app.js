@@ -1,5 +1,16 @@
-// import functions and grab DOM elements
+import { quizAskQuestions, quizIntroduction, showQuizResults } from './compartments.js';
 
-// initialize state
+const startQuizButton = document.getElementById('quiz-start-button');
 
-// set event listeners to update state and DOM
+startQuizButton.addEventListener('click', () => {
+
+    startQuizButton.textContent = 'Retry Quiz?';
+
+    const finishQuiz = quizIntroduction();
+    if (finishQuiz !== false){
+        quizAskQuestions();
+        showQuizResults();
+    }    
+    
+});
+
