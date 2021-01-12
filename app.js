@@ -31,13 +31,18 @@ startQuizButton.addEventListener('click', () => {
 
     //set results text content based on how well they did
     if (correctAnswers === 0){
-        resultsDisplayElement.textContent = `you should definitely do some more Cameron reasearch,${fName} ${lName}`;
+        resultsDisplayElement.textContent = `you should definitely do some more Cameron reasearch, ${fName} ${lName}.`;
+        resultsDisplayElement.style.color = 'red';
+
     }
     else if (correctAnswers > 0 && correctAnswers < 3){
-        resultsDisplayElement.textContent = `you could probably brush up a bit on your Cameron knowledge,${fName} ${lName}`;
+        resultsDisplayElement.textContent = `you could probably brush up a bit on your Cameron knowledge, ${fName} ${lName}.`;
+        resultsDisplayElement.style.color = 'red';
+
     }
     else if (correctAnswers === 3){
         resultsDisplayElement.textContent = `Wow ${fName}... I'd go so far as to say you're a Cameron expert`;
+        resultsDisplayElement.style.color = 'green';
     }
    
     resultsDisplayElement.textContent += ` (${correctAnswers}/3) correct or ${calculatePercentage(correctAnswers, 3)} percent!`;

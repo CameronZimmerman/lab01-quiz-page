@@ -9,5 +9,5 @@ export function answerContainsY(answerString, correctChar) {
 }
 
 export function calculatePercentage(correctNumber, expectedNumber) {
-    return (correctNumber / expectedNumber) * 100;
+    return Math.round((correctNumber / expectedNumber) * 100);
 }
