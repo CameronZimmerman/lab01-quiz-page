@@ -15,12 +15,16 @@ startQuizButton.addEventListener('click', () => {
     const lName = prompt(`Okay ${fName} what is your Last name?`);  
     //questions to ask user
     const questionsArr = 
-    ['is Cameron 19 years of age?',
-        'is Cameron\'s favorite food Tortellini with white sauce?',
-        'Are all of Cameron\'s favorite passtimes included in this list? 1. Gaming 2. Game Development 3. Ukulele'];
-    const answerKey = ['N', 'Y', 'N'];
+    ['am I 19 years of age?',
+        'is my favorite food Tortellini with white sauce?',
+        'Are all of my favorite passtimes included in this list? 1. Gaming 2. Game Development 3. Ukulele',
+        'If I could be any animal, would I be a Gerbil?',
+        'Did I want to be a Dentist when I was much younger?'];
+    const answerKey = ['N', 'Y', 'N', 'N', 'Y'];
 
     let correctAnswers = 0;
+    const possibleCorrectAnswers = 3;
+
     //for each question in our array, ask the user a question and if the answer matches the key add to correct answers
        
     for (let i = 0; i < questionsArr.length; i++){
@@ -35,17 +39,17 @@ startQuizButton.addEventListener('click', () => {
         resultsDisplayElement.style.color = 'red';
 
     }
-    else if (correctAnswers > 0 && correctAnswers < 3){
+    else if (correctAnswers > 0 && correctAnswers < possibleCorrectAnswers){
         resultsDisplayElement.textContent = `you could probably brush up a bit on your Cameron knowledge, ${fName} ${lName}.`;
         resultsDisplayElement.style.color = 'red';
 
     }
-    else if (correctAnswers === 3){
+    else if (correctAnswers === possibleCorrectAnswers){
         resultsDisplayElement.textContent = `Wow ${fName}... I'd go so far as to say you're a Cameron expert`;
         resultsDisplayElement.style.color = 'green';
     }
    
-    resultsDisplayElement.textContent += ` (${correctAnswers}/3) correct or ${calculatePercentage(correctAnswers, 3)} percent!`;
+    resultsDisplayElement.textContent += ` (${correctAnswers}/${possibleCorrectAnswers}) correct or ${calculatePercentage(correctAnswers, possibleCorrectAnswers)} percent!`;
     
 });
 

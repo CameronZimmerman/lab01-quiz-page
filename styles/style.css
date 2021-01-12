@@ -42,7 +42,7 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding-top: var(--gutter);
+    padding-top: 100px;
     padding-bottom: var(--gutter);
     margin-top: var(--gutter);
     margin-bottom: var(--gutter);
@@ -60,10 +60,12 @@ section {
 header {
     display: flex;
     justify-content: center;
-    background-color: rgba(130, 113, 145,0.25);
+    background-color: rgba(136, 0, 255, 0.25);
     height: var(--header-height);
     box-shadow: var(--shadow);
     font-family: 'Hachi Maru Pop', cursive;
+    position: fixed;
+    width: 100%;
 }
 
 footer {
